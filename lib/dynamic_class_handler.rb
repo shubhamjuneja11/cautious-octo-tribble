@@ -13,7 +13,10 @@ class DynamicClassHandler
         instance_variable_set("@" + attribute.strip, argument)
       end
     end
+    create_methods(user_attributes)
+  end
 
+  def create_methods(user_attributes)
     dynamic_class.define_method('to_s') do
       output_string = ""
       user_attributes.each do |attribute|

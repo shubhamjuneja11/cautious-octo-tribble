@@ -1,2 +1,2 @@
 require_relative '../lib/csv_reader'
-CsvReader.read(ARGV[0])
+CsvReader.new.create_objects_array(ARGV[0])
